@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabores del Mundo</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍴 Sabores del Mundo</div>
+  <nav id="menu">
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#recetas">Recetas</a></li>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <!-- Botón hamburguesa -->
+  <button class="hamburguesa" id="hamburguesa">☰</button>
+  <!-- Botón de modo oscuro -->
+  <button id="darkToggle" class="btn">🌙</button>
+</header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Explora los Sabores del Mundo</h1>
+      <p>Recetas fáciles, deliciosas y con un toque internacional.</p>
+      <a href="#recetas" class="btn">Ver Recetas</a>
+    </div>
+  </section>
+
+  <!-- RECETAS DESTACADAS -->
+  <section id="recetas">
+    <h2>Recetas Destacadas</h2>
+    <div class="recetas-grid">
+      <article class="card">
+        <img src="pasta.jpg" alt="Pasta italiana">
+        <h3>Pasta Italiana</h3>
+        <span class="badge">⭐ Destacada</span>
+        <p>Tiempo: 30 min | Dificultad: Fácil</p>
+        <a href="receta pasta.html" class="btn">Ver Receta</a>
+      </article>
+      <article class="card">
+        <img src="sushi.webp" alt="Sushi japonés">
+        <h3>Sushi Japonés</h3>
+        <p>Tiempo: 45 min | Dificultad: Media</p>
+        <a href="receta sushi.html" class="btn">Ver Receta</a>
+      </article>
+      <article class="card">
+        <img src="tacos.webp" alt="Tacos mexicanos">
+        <h3>Tacos Mexicanos</h3>
+        <p>Tiempo: 20 min | Dificultad: Fácil</p>
+        <a href="receta tacos.html" class="btn">Ver Receta</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section id="categorias">
+    <h2>Categorías</h2>
+    <div class="categorias-grid">
+      <div class="categoria"><i class="fas fa-pizza-slice"></i><h3>Italianas</h3><p>12 recetas</p></div>
+      <div class="categoria"><i class="fas fa-fish"></i><h3>Japonesas</h3><p>8 recetas</p></div>
+      <div class="categoria"><i class="fas fa-pepper-hot"></i><h3>Mexicanas</h3><p>15 recetas</p></div>
+      <div class="categoria"><i class="fas fa-ice-cream"></i><h3>Postres</h3><p>10 recetas</p></div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi">
+    <h2>Sobre Mí</h2>
+    <p>  ¡Hola! Soy May,👩‍🍳no soy tan  amante de la cocina, pero me gusta preparar alguna comida casera y de los sabores que cuentan historias. Desde pequeña descubrí mi pasión ayudando a mi abuelita a preparar tortillas hechas a mano, y con el tiempo fui explorando recetas nuevas que hoy quiero compartir contigo.
+
+En este blog encontrarás recetas sencillas, llenas de sabor y con ese toque especial que transforma lo cotidiano en algo único. Mi objetivo es que disfrutes tanto cocinar como comer. ¡Bienvenido/a a mi blog!</p>
+    <p>Sígueme en mis redes:</p>
+    <div class="redes">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <h2>Suscríbete</h2>
+    <p>Recibe en tu correo las mejores recetas semanales.</p>
+    <form>
+      <input type="email" placeholder="Tu email" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <p>&copy; 2025 Sabores del Mundo | Diseñado con 💖</p>
+    <p>Email: contacto@saboresdelmundo.com</p>
+  </footer>
+
+</body>
+<script>
+  // Botón de modo oscuro
+  const toggle = document.getElementById("darkToggle");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode")
+      ? "☀"
+      : "🌙";
+  });
+
+  // Menú hamburguesa
+  const hamburguesa = document.getElementById("hamburguesa");
+  const menu = document.querySelector("nav ul");
+
+  hamburguesa.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
+</html>
